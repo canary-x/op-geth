@@ -8,7 +8,7 @@ cd /app/leaf
 go version
 
 echo "Starting benchmarks"
-go test -bench=. -cpu=1
+export GOCACHE=off && go test -bench=. -cpu=1
 
 # go in a sleep loop us to peek into the nitro console
 while true; do sleep 1000; done
