@@ -5,6 +5,7 @@ echo "Started enclave"
 pwd
 ls -al
 cd /app/leaf
+go version
 
 echo "Starting benchmarks"
 go test -bench=. -cpu=1
