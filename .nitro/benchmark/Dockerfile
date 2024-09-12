@@ -9,5 +9,6 @@ ENV HOME /root
 COPY ./ ./
 COPY .nitro/benchmark/run.sh ./
 RUN go mod vendor
+RUN mkdir /app/tmp
 
 CMD ["/app/run.sh"]
