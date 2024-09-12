@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-cd ./leaf
+echo "Started enclave"
+pwd
+ls -al
+cd leaf
+
+echo "Starting benchmarks"
 go test -bench=. -cpu=1
 
 # go in a sleep loop us to peek into the nitro console
