@@ -5,7 +5,7 @@ FROM golang:1.22.5
 WORKDIR /app
 
 COPY ./ ./
-COPY .nitro/benchmark/run.sh /app
+COPY .nitro/benchmark/run.sh ./
 RUN go mod vendor
 
-CMD ["./run.sh"]
+CMD ["/app/run.sh"]
